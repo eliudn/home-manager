@@ -11,20 +11,27 @@
 
   config = lib.mkIf config.module.app.zsh.enable {
 
-    programs.zsh = {
-      enable = true;
-      autosuggestion.enable = true;
-      enableCompletion = true;
-      # envExtra = ''
-      #   export SOMEZSHVARIABLE="something"
-      # '';
-    };
-    programs.starship = {
-      enable = true;
-      settings = {
+    programs = {
+      zsh = {
+        enable = true;
+        autosuggestion.enable = true;
+        enableCompletion = true;
+        # envExtra = ''
+        #   export SOMEZSHVARIABLE="something"
+        # '';
 
+        shellAliases = {
+          nvim = "nix run ~/.config/nix_config/nvim/nix-nvim/";
+          cat = "bat";
+        };
+      };
+
+      starship = {
+        enable = true;
+        settings = {
+
+        };
       };
     };
-    # home.shell = "zsh";
   };
 }

@@ -84,6 +84,12 @@
 
   programs.firefox.enable = true;
 
+  users.users.leunamz = {
+    shell = pkgs.zsh;
+  };
+  
+  programs.zsh.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.allowUnsupportedSystem = true;
 

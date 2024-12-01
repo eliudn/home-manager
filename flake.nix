@@ -49,7 +49,7 @@
           ];
         };
 
-        users.users.leunamz ={shell = pkgs.zsh;};
+        # users.users.leunamz ={shell = pkgs.zsh;};
       };
       # homeConfigurations."leunamz" = home-manager.lib.homeManagerConfiguration {
       #   inherit pkgs;

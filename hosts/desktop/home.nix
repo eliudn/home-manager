@@ -25,16 +25,16 @@
   module.app = {
     rofi.enable = true;
     zsh.enable = true;
+    apps.enable = true;
   };
-  # users.users.leunamz = {
-  #   shell = pkgs.zsh;
-  # };
 
+  
   home.packages = with pkgs; [
     teams-for-linux
     discord
     xorg.xrandr
     arandr
+    neofetch
   ];
 
   # services.autorandr.enable = true;
