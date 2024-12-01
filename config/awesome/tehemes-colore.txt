@@ -1,0 +1,19 @@
+
+Capussino
+
+Background = #24273a
+Foreground = #b8c0e0
+selection =  #6e738d
+Comment =    #b7bdf8
+Blue =       #8aadf4
+Cyan =       #91d7e3 #7dc4e4
+Green =      #a6da95 #8bd5ca
+Orange =     #f5a97f 
+Pink =       #f5bde6 #F0c6c6 #f4dbd6
+Purple =     #c6a0f6
+red =        #ed8796 #ee99a0
+Yellow =     #eed49f
+text =       #cad3f5
+
+
+
