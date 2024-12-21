@@ -7,5 +7,6 @@
     ./zsh
     ./rofi
     ./apps
+    ./docker
   ];
 }

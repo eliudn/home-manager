@@ -23,6 +23,7 @@
         shellAliases = {
           nvim = "nix run ~/.config/nix_config/nvim/nix-nvim/";
           cat = "bat";
+          sail = "./vendor/bin/sail";
         };
       };
 

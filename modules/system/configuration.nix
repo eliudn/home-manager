@@ -10,6 +10,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  boot.kernel.sysctl = { 
+    "net.ipv4.ip_unprivileged_port_start" = 80; 
+  };
+
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
@@ -51,9 +55,15 @@
   module.desktop.picom.enable = true;
   # services.desktopManager.plasma6.enable = true;
 
+  # Apps
+  module.apps = {
+    docker.enable = true;
+  };
+
   services.xserver.xkb = {
-    layout = "latam";
-    variant = "deadtilde";
+    layout = "latam, us";
+    options = "grp:alt_shift_toggle";
+    variant = ",";
   };
   console.keyMap = "la-latin1";
 
