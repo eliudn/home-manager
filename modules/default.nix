@@ -8,5 +8,6 @@
     ./rofi
     ./apps
     ./docker
+    ./thunar
   ];
 }

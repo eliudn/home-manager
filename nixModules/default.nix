@@ -6,5 +6,8 @@
 
     # apps 
     ./apps/docker
+
+    # database serve
+    ./apps/databaseServe
   ];
 }

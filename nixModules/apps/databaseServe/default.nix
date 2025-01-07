@@ -4,4 +4,9 @@
     ./mysql
     # ./postgrest
   ];
+
+  module.app = {
+    mysql.enable = true;
+  };
+  
 }

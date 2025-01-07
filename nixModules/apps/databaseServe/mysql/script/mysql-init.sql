@@ -1,0 +1,3 @@
+CREATE USER 'lucas'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* TO 'lucas'@'%';
+FLUSH PRIVILEGES;
