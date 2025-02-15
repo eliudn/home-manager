@@ -26,9 +26,10 @@
     rofi.enable = true;
     zsh.enable = true;
     apps.enable = true;
+    thunar.enable = true;
+    brave.enable = true;
   };
 
-  
   home.packages = with pkgs; [
     teams-for-linux
     discord
@@ -46,9 +47,9 @@
       recursive = true;
     };
   };
-  home.sessionVariables =
-    {
-    };
+  home.sessionVariables = {
+  };
+
 
   programs.home-manager.enable = true;
 }

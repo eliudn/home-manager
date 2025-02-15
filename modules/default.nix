@@ -1,4 +1,9 @@
-{inputs, pkgs, config, ... }:
+{
+  inputs,
+  pkgs,
+  config,
+  ...
+}:
 {
   imports = [
     ./firefox
@@ -9,5 +14,6 @@
     ./apps
     ./docker
     ./thunar
+    ./brave
   ];
 }

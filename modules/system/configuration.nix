@@ -10,10 +10,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.kernel.sysctl = { 
-    "net.ipv4.ip_unprivileged_port_start" = 80; 
+  boot.kernel.sysctl = {
+    "net.ipv4.ip_unprivileged_port_start" = 80;
   };
-
+  boot.kernelModules = [ "usb_storage" ];
   networking.hostName = "nixos"; # Define your hostname.
 
   # Enable networking
@@ -78,14 +78,22 @@
     pulse.enable = true;
   };
 
+  programs.adb.enable = true;
+  programs.thunar = {
+    enable = true;
+    plugins = with pkgs.xfce; [
+      thunar-archive-plugin
+      thunar-volman
+    ];
+  };
   users.users.leunamz = {
     isNormalUser = true;
     description = "leunamz";
     extraGroups = [
       "networkmanager"
       "wheel"
+      "adbusers kvm"
     ];
-
     packages = with pkgs; [
       # kdePackages.kate
       #  thunderbird
@@ -96,8 +104,9 @@
 
   users.users.leunamz = {
     shell = pkgs.zsh;
+
   };
-  
+
   programs.zsh.enable = true;
 
   nixpkgs.config.allowUnfree = true;
