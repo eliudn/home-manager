@@ -26,7 +26,7 @@
     rofi.enable = true;
     zsh.enable = true;
     apps.enable = true;
-    thunar.enable = true;
+    # thunar.enable = true;
     brave.enable = true;
   };
 
@@ -49,7 +49,6 @@
   };
   home.sessionVariables = {
   };
-
 
   programs.home-manager.enable = true;
 }

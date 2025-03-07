@@ -2,13 +2,14 @@
   lib,
   config,
   pkgs,
+  ...
 }:
 {
   options = {
-    module.app.thunar.enable = lib.mkEnableOption "brave";
+    module.app.brave.enable = lib.mkEnableOption "brave";
 
   };
-  config = lib.mkif config.module.app.enable {
+  config = lib.mkIf config.module.app.brave.enable {
     home.packages = with pkgs; [ brave ];
   };
 }
